@@ -58,7 +58,10 @@ class ProfileViewController: UITableViewController {
   @IBOutlet private var weightLabel:UILabel!
   @IBOutlet private var heightLabel:UILabel!
   @IBOutlet private var bodyMassIndexLabel:UILabel!
-  
+  override func viewDidLoad() {
+      super.viewDidLoad()
+      updateHealthInfo()
+  }
   private let userHealthProfile = UserHealthProfile()
   
   private func updateHealthInfo() {
